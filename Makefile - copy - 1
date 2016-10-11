@@ -1,0 +1,7 @@
+CC=gcc
+
+all:
+	$(CC) param_helper.c test.c -o out
+
+clean:
+	rm -rf *.o *.exe

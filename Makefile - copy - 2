@@ -1,0 +1,16 @@
+CC=gcc
+CFLAGS=-c -Wall
+
+all: out
+
+out: param_helper.o test.o
+	$(CC) param_helper.o test.o -o out
+
+test.o: test.c
+	$(CC) $(CFLAGS) test.c
+
+param_helper.o: param_helper.c
+	$(CC) $(CFLAGS) param_helper.c
+
+clean:
+	rm -rf *.o *.exe
